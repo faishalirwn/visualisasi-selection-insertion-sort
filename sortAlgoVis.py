@@ -1,5 +1,6 @@
 import random
 import time
+import copy
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
@@ -52,11 +53,11 @@ if __name__ == "__main__":
 
     # Build and randomly shuffle list of integers.
     A1 = [x + 1 for x in range(N)]
-    A2 = [x + 1 for x in range(N)]
+
     random.seed(time.time())
     random.shuffle(A1)
-    random.shuffle(A2)
 
+    A2 = copy.deepcopy(A1)
 
     # Get appropriate generator to supply to matplotlib FuncAnimation method.
     title1 = "Insertion sort"
