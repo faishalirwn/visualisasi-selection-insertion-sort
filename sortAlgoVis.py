@@ -124,7 +124,7 @@ if __name__ == "__main__":
         for rect, val in zip(rects, A):
             rect.set_height(val)
         iteration[0] += 1
-        text.set_text("# of operations: {}".format(iteration[0]))
+        text.set_text("Jumlah operasi: {}".format(iteration[0]))
 
     anim1 = animation.FuncAnimation(fig, func=update_fig,
                                    fargs=(
