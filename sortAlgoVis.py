@@ -49,7 +49,9 @@ def selectionsort(A):
 
 if __name__ == "__main__":
     # Get user input to determine range of integers (1 to N)
-    N = int(input("Enter number of integers: "))
+    N = int(input("Masukkan jumlah elemen array (Min: 2, Max: 100): "))
+    while N < 2 or N > 100:
+        N = int(input("Masukkan jumlah elemen array (Min: 2, Max: 100): "))
 
     # Build and randomly shuffle list of integers.
     A1 = [x + 1 for x in range(N)]
@@ -67,6 +69,7 @@ if __name__ == "__main__":
 
     # Initialize figure and axis.
     fig = plt.figure(1)
+    fig.canvas.set_window_title('Visualisasi Selection sort dan Insertion sort')
     ax1 = fig.add_subplot(121)
     ax2 = fig.add_subplot(122)
 
